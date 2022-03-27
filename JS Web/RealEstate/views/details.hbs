@@ -1,0 +1,42 @@
+<section id="deatils-page">
+    <div class="wrapper">
+        <div class="product-img">
+            <img src="{{offer.image}}">
+        </div>
+        <div class="product-info">
+            <div class="product-text">
+                <div class="product-text">
+                    <h1>Name: {{offer.name}}</h1>
+                    <h2>Type: {{offer.type}}</h2>
+                    <h4>Year: {{offer.year}}</h4>
+                    <h4>City: {{offer.city}}</h4>
+                    <p>Description: {{offer.description}}</p>
+
+                    {{#if offer.rentersArr}}
+                    <p>People rented this housing: {{offer.rentersStr}}</p>
+                    {{else}}
+                    <p>People rented this housing: There are no tenants yet.</p>
+                    {{/if}}
+                </div>
+            </div>
+
+            {{#if hasUser}}
+            <div class="product-btn">
+                {{#if offer.isOwner}}
+                <a href="/edit/{{offer._id}}" class="edit">Edit</a>
+                <a href="/delete/{{offer._id}}" class="remove">Delete</a>
+                {{else}}
+                    {{#if offer.hasSpace}}
+                <a href="/rent/{{offer._id}}" class="rentHome">Rent a home, available {{offer.available}} housing</a>
+                        {{#if offer.alreadyRented}}
+                <p class="alRentHome">You have already rent this home</p>
+                        {{/if}}
+                    {{else}}
+                <p class="no-housing">No Housing Available!</p>
+                    {{/if}}
+                {{/if}}
+            </div>
+            {{/if}}
+        </div>
+    </div>
+</section>
