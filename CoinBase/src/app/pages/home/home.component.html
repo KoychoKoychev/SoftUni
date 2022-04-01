@@ -59,28 +59,16 @@
         </td>
         <td>
             <div class="exchanges_col">
-                <tr>
+                <tr *ngFor="let action of actionsArr">
                     <div>
-                        <p>BitCoin BTC<i class="fas fa-long-arrow-alt-right"></i> Bank Transfer</p>
-                        <p><b>1.16</b> BTC <i class="fas fa-exchange-alt"></i> <b>60503301.54</b> $</p>
-                    </div>
-                </tr>
-                <tr>
-                    <div>
-                        <p>BitCoin BTC<i class="fas fa-long-arrow-alt-right"></i> Bank Transfer</p>
-                        <p><b>1.16</b> BTC <i class="fas fa-exchange-alt"></i> <b>60503301.54</b> $</p>
-                    </div>
-                </tr>
-                <tr>
-                    <div>
-                        <p>BitCoin BTC<i class="fas fa-long-arrow-alt-right"></i> Bank Transfer</p>
-                        <p><b>1.16</b> BTC <i class="fas fa-exchange-alt"></i> <b>60503301.54</b> $</p>
-                    </div>
-                </tr>
-                <tr>
-                    <div>
-                        <p>BitCoin BTC<i class="fas fa-long-arrow-alt-right"></i> Bank Transfer</p>
-                        <p><b>1.16</b>BTC <i class="fas fa-exchange-alt"></i> <b>60503301.54</b>$</p>
+                        <p>{{action.currencyFromLong}} {{action.currencyFromShort}}
+                            <i class="fas fa-long-arrow-alt-right"></i>
+                            {{action.currencyToLong}}
+                        </p>
+                        <p><b>{{action.amountFrom}}</b> {{action.currencyFromShort}}
+                            <i class="fas fa-exchange-alt"></i>
+                            <b>{{action.amountTo}}</b> {{action.currencyToShort}}
+                        </p>
                     </div>
                 </tr>
             </div>
@@ -88,5 +76,18 @@
         </tr>
     </table>
 </div>
+
+<div class="home_welcome">
+    <div class="home_welcome_info">
+        <h3>Great experience with CoinBase</h3>
+        <p> CoinBase is an online site and a p2admin platform that allows users to buy, sell and/ or exchange digital
+            and fiat assets safely. Owned and managed by CoinBase Business Services established and Incoperated in
+            Nigeria.
+        </p>
+        <a href="#" class="primary_button">DISCOVER</a>
+    </div>
+    <img src="/assets/images/a471ab80c21f40e2f9cc2e9102904613.png" alt="">
+</div>
+
 
 <app-footer></app-footer>
