@@ -6,7 +6,10 @@ header {
     position: absolute;
     top: 0;
     width: calc(100vw - 3rem);
-    height: 8rem;
+    height: 6rem;
+    position: sticky;
+    background-color: white;
+    z-index: 1000;
 }
 
 header .logo img{
