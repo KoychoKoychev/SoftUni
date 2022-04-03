@@ -171,9 +171,9 @@
 
 .our_blog .blog_post_cards{
     display: flex;
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 

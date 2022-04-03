@@ -38,17 +38,28 @@ a {
     margin: 0 0.5rem;
 }
 
+header>.nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 div.actions{
     display: flex;
     align-items: center;
 }
 
+div.actions .auth a{
+    color: aliceblue;
+}
 
 div.actions .auth li{
     margin-top: .65rem;
-    color: aliceblue;
 }
 
 .current{
     border-bottom: 3px solid #FD749B;
+}
+
+.actions .auth a.primary_button:hover{
+    color: black;
 }

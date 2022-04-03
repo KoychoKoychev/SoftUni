@@ -7,6 +7,23 @@ body{
     overflow-x: hidden;
 }
 
+body::-webkit-scrollbar{
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track{
+    width: 15px;
+    background-color: lightgray;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+body::-webkit-scrollbar-thumb{
+    width: 15px;
+    background-color: #CB5FA6;
+    border-radius: 15px;
+}
+
 *{
     font-family: 'Poppins', sans-serif;
 }
@@ -28,5 +45,8 @@ a{
     cursor: pointer;
     font-weight: 600;
     font-size: 1.1rem;
+}
 
+.primary_button:hover{
+    color: black;
 }

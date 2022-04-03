@@ -1,0 +1,46 @@
+iframe{
+    margin: 50px calc(50vw - 300px);
+    position: relative;
+}
+
+.contact_form{
+    width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact_form input{
+    width: 315px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 20px 0;
+    padding: 10px 20px;
+}
+
+.contact_form input:first-child{
+    margin-right: 30px;
+}
+
+.contact_form textarea{
+    display: block;
+    width: 710px;
+    margin: 0 auto;
+    height: 15em;
+    resize: none;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.contact_form button{
+    display: block;
+    margin-top: 50px;
+    border: none;
+}
+
+p{
+    text-align: center;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+    margin-top: 50px;
+}

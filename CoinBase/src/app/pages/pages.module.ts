@@ -4,11 +4,15 @@ import { HomeComponent } from './home/home.component';
 import { CoreModule } from '../core/core.module';
 import { CompModule } from '../comp/comp.module';
 import { RouterModule } from '@angular/router';
+import { AboutComponent } from './about/about.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
+    AboutComponent,
+    ContactsComponent,
   ],
   imports: [
     CommonModule,
@@ -16,7 +20,9 @@ import { RouterModule } from '@angular/router';
     CompModule
   ],
   exports:[
-    HomeComponent
+    HomeComponent,
+    AboutComponent,
+    ContactsComponent
   ]
 })
 export class PagesModule { }
