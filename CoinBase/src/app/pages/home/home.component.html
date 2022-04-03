@@ -89,5 +89,28 @@
     <img src="/assets/images/a471ab80c21f40e2f9cc2e9102904613.png" alt="">
 </div>
 
+<div class="home_trade">
+    <section class="trade_wrapper">
+        <h3>Trade from anywhere</h3>
+        <a href="#">
+            <i class="fab fa-bitcoin"></i>
+            <p>Crypto Currency</p>
+        </a>
+        <a href="#">
+            <i class="fas fa-address-card"></i>
+            <p>Gift Cards</p>
+        </a>
+    </section>
+</div>
+
+<div class="our_blog">
+    <h3>Our blog</h3>
+    <p>Get to know the latest stuff via our blog post.</p>
+    <div class="blog_post_cards">
+        <app-blog-card *ngFor="let post of blogPostsArr" [category]="post.category" [date]="post.created_at"
+            [title]="post.title" [content]="post.content">
+        </app-blog-card>
+    </div>
+</div>
 
 <app-footer></app-footer>
