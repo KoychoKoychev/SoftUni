@@ -6,6 +6,10 @@ import { CompModule } from '../comp/comp.module';
 import { RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+import { AuthService } from '../core/auth.service';
 
 
 @NgModule({
@@ -13,16 +17,24 @@ import { ContactsComponent } from './contacts/contacts.component';
     HomeComponent,
     AboutComponent,
     ContactsComponent,
+    RegisterComponent,
+    LoginComponent,
   ],
   imports: [
     CommonModule,
     CoreModule,
-    CompModule
+    CompModule,
+    FormsModule
+  ],
+  providers: [
+    AuthService
   ],
   exports:[
     HomeComponent,
     AboutComponent,
-    ContactsComponent
+    ContactsComponent,
+    RegisterComponent,
+    LoginComponent,
   ]
 })
 export class PagesModule { }

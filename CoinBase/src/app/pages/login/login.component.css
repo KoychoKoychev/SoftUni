@@ -1,0 +1,57 @@
+.login_wrapper{
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.login_wrapper h3{
+font-size: 1.5rem;
+margin-top: 1em;
+background: linear-gradient(178.18deg, #FD749B -13.56%, #281AC8 158.3%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+background-clip: text;
+}
+
+.login_wrapper>span{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.login_wrapper input{
+    display: block;
+    width: 350px;
+    height: 20px;
+    padding: 20px;
+    margin: 45px auto;
+    border-radius: 5px;
+    border-color: darkgray;
+}
+
+.login_container{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.login_form button{
+    border: none;
+}
+
+.login_container a{
+    text-decoration: underline;
+    font-weight: 700;
+    color: black;
+}
+
+input.ng-valid {
+    border: 3px solid #42A948; /* green */
+}
+  
+input.ng-invalid.ng-touched {
+    border: 3px solid #A94442; /* red */
+}

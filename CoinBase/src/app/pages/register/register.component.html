@@ -1,0 +1,40 @@
+<div class="register_container">
+    <app-header></app-header>
+    <div class="register_wrapper">
+    <h3>Sign up</h3>
+    <span>There's no charge upon registration</span>
+    <p class="error" *ngIf="errors">{{errors}}</p>
+    <form #registerForm="ngForm" (ngSubmit)="onSubmit()" action="" class="register_form">
+        <input type="text" name="username" id="username" placeholder="Username"
+        ngModel pattern="[A-Za-z]+" #username="ngModel" required>
+
+        <p class="error" *ngIf="username.invalid && username.touched">
+            Username must include only letters.
+        </p>
+
+        <input type="email" name="email" id="email" placeholder="Email"
+        ngModel email #email="ngModel" required>
+
+        <p class="error" *ngIf="email.invalid && email.touched">
+            Your email address must be valid.
+        </p>
+
+        <input type="password" name="password" id="password" placeholder="Password"
+        ngModel minlength="6" #password="ngModel" required>
+
+        <p class="error" *ngIf="password.invalid && password.touched">
+            Passowrd must be at least 6 characters long.
+        </p>
+
+        <input type="password" name="rePass" id="rePass" placeholder="Confirm Password"
+        ngModel [pattern]="password.value" #rePass="ngModel" required>
+
+        <p class="error" *ngIf="rePass.invalid && rePass.touched">
+            Passowrds don't match.
+        </p>
+        <button class="primary_button" type="submit" [disabled]="registerForm.invalid">SIGN UP</button>
+    </form>
+    <p>Already a memeber? <a href="/login">Login</a></p>
+</div>
+<app-footer></app-footer>
+</div>
